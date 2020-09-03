@@ -1,0 +1,38 @@
+{
+    "name": "vrkansagara/laravel-request-log",
+    "description": "Store all your request and response into database.",
+    "type": "library",
+    "homepage": "https://vrkansagara.in/",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/http": "^7.27",
+        "illuminate/database": "^7.27"
+    },
+    "license": "BSD-3-Clause License",
+    "authors": [
+        {
+            "name": "Vallabh Kansagara",
+            "email": "vrkansagara@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "psr-4": {
+        "Vrkansagara\\LaravelRequestLog\\": "src/"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vrkansagara\\LaravelRequestLog\\ServiceProvider"
+            ],
+            "aliases": {
+                "LaravelRequestLog": "Vrkansagara\\LaravelRequestLog\\Facade"
+            }
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+        ]
+    }
+}
